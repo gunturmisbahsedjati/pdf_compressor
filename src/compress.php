@@ -2,11 +2,10 @@
 header('Content-Type: application/json');
 
 // Koneksi Database
-$host = 'host.docker.internal';
-$db   = 'db_archive';
-$user = 'all';
-$pass = 'all';
-
+$host = 'db';
+$db   = 'pdf_app';
+$user = 'user';
+$pass = 'userpassword';
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
